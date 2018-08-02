@@ -25,3 +25,11 @@ print('s' in my_list) #false
 #LIST ITERATION
 for alphabet in my_list:
     print('Alphabet is: ', alphabet)
+
+
+#nested lists
+
+a= ['2.3, 4, 1.3', '6.1, 9.0, 7.3']
+b= [i.split(',') for i in a]
+# now b contains [['2.3', ' 4', ' 1.3'], ['6.1', ' 9.0', ' 7.3']]
+print(b)
