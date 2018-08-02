@@ -20,3 +20,8 @@ print(ex3)
 my_list = ['p','r','o','b','l','e','m']
 print('p' in my_list)  #true
 print('s' in my_list) #false
+
+
+#LIST ITERATION
+for alphabet in my_list:
+    print('Alphabet is: ', alphabet)
