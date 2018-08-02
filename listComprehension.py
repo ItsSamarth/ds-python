@@ -13,3 +13,10 @@ print(pow3)
 
 ex3 = [x+y for x in ['Python ','C '] for y in ['Language','Programming']]
 print(ex3)
+
+
+#LIST MEMEBERSHIP TEST
+
+my_list = ['p','r','o','b','l','e','m']
+print('p' in my_list)  #true
+print('s' in my_list) #false
