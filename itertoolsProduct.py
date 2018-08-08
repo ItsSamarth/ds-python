@@ -16,3 +16,7 @@ print(list(product(*B)))
 
 # Taking Input from list
 a = list(map(int, input().split()))
+
+# multiple ways to print
+print(*product(a,b))
+print(*itertools.product(A,B))
