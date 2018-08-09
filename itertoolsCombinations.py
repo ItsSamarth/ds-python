@@ -8,4 +8,9 @@ from itertools import combinations
 # A=['1','1','3','3','3']
 # print(list(combinations(A,4)))
 
-print(*(combinations('HACK',2)))
+# print(*(combinations('HACK',2)))
+num =2
+
+for j in range(1,num+1):
+    for i in combinations(sorted('HACK'), j):
+        print(''.join(i))
