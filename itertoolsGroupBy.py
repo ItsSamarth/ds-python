@@ -33,7 +33,8 @@ count_per_group = [len(i) for i in groups]
 print('count_per_group', count_per_group)
 
 #adding keys and count to dictionary
-zip_values = dict(zip(keys, count_per_group))
+# zip_values = dict(zip(keys, count_per_group))
+zip_values = list( zip(keys, count_per_group))
 print(zip_values)
 
 
