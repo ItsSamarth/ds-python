@@ -1,7 +1,9 @@
+# HACKERANK SOLUTION FOR MAXIMIZE IT PROBLEM
 
-n,m=input().split()
-max_list=[]
-list = []
+
+# n,m=input().split()
+# max_list=[]
+# list = []
 
 # for i in range (int(n)):
 #     print("Coming inside")
@@ -21,17 +23,17 @@ list = []
 # 3 7 8 9
 # 5 5 7 8 9 10
 
-for i in range (int(n)):
-    list = [ int(x) for x in input().split()]
-    max_list.append(max(list))
-    list.clear()
+# for i in range (int(n)):
+#     list = [ int(x) for x in input().split()]
+#     max_list.append(max(list))
+#     list.clear()
 
 # print(max_list)
-
-sum = 0
-
-for j in max_list:
-    sum = sum + j**2
-
-
-print(sum % int(m))
+#
+# sum = 0
+#
+# for j in max_list:
+#     sum = sum + j**2
+#
+#
+# print(sum % int(m))
