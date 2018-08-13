@@ -22,9 +22,7 @@ sum=0
 for i in range(total_customers):
     size, price = map(int, input().split())
     if counter_list[size] > 0:
-        print(counter_list[size])
         counter_list[size] -=1
         sum = sum + price
-        print("sum", sum)
 
 print(sum)
