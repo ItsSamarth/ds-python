@@ -20,3 +20,7 @@ print(counterlist.most_common())
 
 counterlist[3] = 10
 print(counterlist)
+
+
+# if you want to find any value which is not in the list then it will not give any error
+#but in dictionary you will get errors
