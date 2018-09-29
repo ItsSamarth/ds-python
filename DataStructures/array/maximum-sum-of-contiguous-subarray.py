@@ -11,6 +11,6 @@ def maxSubArraySum(arr, length):
             max_global = max_current
 
     print(max_global)
-    
 a = [-2, -3, 4, -1, -2, 1, 5, -3]
+# a = [-2, -3, -1, -4, -6]
 maxSubArraySum(a,len(a))
