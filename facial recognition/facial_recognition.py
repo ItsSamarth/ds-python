@@ -18,7 +18,7 @@ while True:
 
     #Takes time to process if we use RGB color panel that's why we use grey scale
 
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2COLOR_BGR2GRAY)
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     faces = face_cascade.detectMultiScale(
     gray,
