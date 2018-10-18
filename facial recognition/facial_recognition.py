@@ -24,7 +24,7 @@ while True:
     gray,
     scaleFactor=1.1,
     minNeighbors=5,
-    minSize = (35,35)
+    minSize = (10,10)
     )
 
     #now draw rectangle around the faces
