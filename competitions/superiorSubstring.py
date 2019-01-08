@@ -1,7 +1,4 @@
 def superiorSubstring(str, n):
-    if n <=3:
-        print(n)
-        return
     dict ={}
     for x in str:
         if x in dict:
@@ -18,11 +15,11 @@ def superiorSubstring(str, n):
 
 
 
-
 if __name__ == "__main__":
     tc = int(input())
     while tc:
         str_len = int(input())
-        str = list(input().lower())
+        str = list(input())
+        print(str)
         superiorSubstring(str, str_len)
         tc-=1
