@@ -16,7 +16,7 @@ def fibo(n):
     return value
 
 
-for i in range(1,1140):
+for i in range(1,4140):
     print(i , ':', fibo(i))
 
 print("--- %s seconds ---" % (time.time() - start_time))
