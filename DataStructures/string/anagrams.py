@@ -1,8 +1,11 @@
+#sorting method to check anagrams
 def check(s1, s2):
     if sorted(s1) == sorted(s2):
         print('It is an anagram')
     else:
         print("Not anagram")
+
+
 
 
 if __name__ == "__main__":
