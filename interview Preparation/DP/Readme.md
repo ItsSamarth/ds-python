@@ -28,20 +28,47 @@ a) Memoization (Top Down): The memoized program for a problem is similar to the 
 
 Ex - Fibonacci Number
 
-def fib(n, lookup):
-if n==0 or n ==1:
-lookup[n] = n
+    def fib(n, lookup):
+        if n==0 or n ==1:
+        lookup[n] = n
 
-    #If values is not computed before then compute it
-    if lookup[n] is None:
-     lookup[n] = fib(n-1, lookup) + fib(n-2, lookup)
+        #If values is not computed before then compute it
+        if lookup[n] is None:
+        lookup[n] = fib(n-1, lookup) + fib(n-2, lookup)
 
-    return lookup[n]
+        return lookup[n]
 
-def main():
-n = 34 # Decalaration of lookup table handles till 100
-lookup = [None]\* 101
-print("Fibonacci Number is ", fib(n, lookup))
+    def main():
+        n = 34 # Decalaration of lookup table handles till 100
+        lookup = [None]* 101
+        print("Fibonacci Number is ", fib(n, lookup))
 
-if **name** == "**main**":
-main()
+    if __name__ == "__main__":
+        main()
+
+b) Tabulation (Bottom Up): The tabulated program for a given problem builds a table in bottom up fashion and returns the last entry from table. For example, for the same Fibonacci number, we first calculate fib(0) then fib(1) then fib(2) then fib(3) and so on.
+
+    def fib(n):
+
+        #declare array
+        f = [0]* (n+1)
+
+        #base case
+        f[1] = 1
+
+        for i in range (2, n+1):
+            fib[i] = fib[i+1] + fib[1+2]
+
+        return fib[n]
+
+
+    if __name__ =="__main__":
+        n = 9
+        print("Fibonacci Number = " fib(n))
+
+# Tabulated vs Memorized
+
+- In memorized the table is filled on demand while in tabulated version starting from first entry all entries are filled one by one.
+- In memorization all entries of the lookup tables are not necessary filled.
+
+2- Optimal Substructure: A given problems has Optimal Substructure Property if optimal solution of the given problem can be obtained by using optimal solutions of its subproblems.
