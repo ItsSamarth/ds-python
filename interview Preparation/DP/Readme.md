@@ -1,4 +1,4 @@
-DYNAMIC PROBLEM (STATEMENTS)
+# DYNAMIC PROBLEM (STATEMENTS)
 
 It is an algorithmic paradigm that solves a given complex problem by breaking it into subproblems and stores the results of subproblems to avoid computing the same results again.
 
@@ -14,17 +14,17 @@ There are two main properties of a problem that suggests that the given problem 
 
 EX - fibonacci Number
 
-int fib(int n) {
-if (n<=1)
-return n
-return fib(n-1) + fib(n-2)
-}
+    int fib(int n) {
+    if (n<=1)
+    return n
+    return fib(n-1) + fib(n-2)
+    }
 
 - There are following two different ways to store the repeated values:
   a) Memorization ( Top Down)
   b) Tabulation (Bottom Up)
 
-a) Memoization (Top Down): The memoized program for a problem is similar to the recursive version with a small modification that it looks into a lookup table before computing solutions. We initialize a lookup array with all initial values as NIL. Whenever we need the solution to a subproblem, we first look into the lookup table.If the precomputed value is there then we return that value, otherwise, we calculate the value and put the result in the lookup table so that it can be reused later.
+# a) Memoization (Top Down): The memoized program for a problem is similar to the recursive version with a small modification that it looks into a lookup table before computing solutions. We initialize a lookup array with all initial values as NIL. Whenever we need the solution to a subproblem, we first look into the lookup table.If the precomputed value is there then we return that value, otherwise, we calculate the value and put the result in the lookup table so that it can be reused later.
 
 Ex - Fibonacci Number
 
@@ -46,7 +46,7 @@ Ex - Fibonacci Number
     if __name__ == "__main__":
         main()
 
-b) Tabulation (Bottom Up): The tabulated program for a given problem builds a table in bottom up fashion and returns the last entry from table. For example, for the same Fibonacci number, we first calculate fib(0) then fib(1) then fib(2) then fib(3) and so on.
+# b) Tabulation (Bottom Up): The tabulated program for a given problem builds a table in bottom up fashion and returns the last entry from table. For example, for the same Fibonacci number, we first calculate fib(0) then fib(1) then fib(2) then fib(3) and so on.
 
     def fib(n):
 
