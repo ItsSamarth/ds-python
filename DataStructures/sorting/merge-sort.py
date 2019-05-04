@@ -8,30 +8,32 @@ def MergeSort(arr):
         MergeSort(leftArray)
         MergeSort(rightArray)
 
-        i=j=k=0
-        while i<len(leftArray) and j< len(rightArray):
+        i = j = k = 0
+        print('left array', leftArray)
+        print('right array', rightArray)
+
+        while i < len(leftArray) and j < len(rightArray):
             if leftArray[i] < rightArray[j]:
                 arr[k] = leftArray[i]
-                i+=1
+                i += 1
             else:
                 arr[k] = rightArray[j]
-                j+=1
+                j += 1
 
-            k+=1
-        while i< len(leftArray):
+            k += 1
+        while i < len(leftArray):
             arr[k] = leftArray[i]
-            i+=1
-            k+=1
+            i += 1
+            k += 1
 
         while j < len(rightArray):
             arr[k] = rightArray[j]
-            j+=1
-            k+=1
-
+            j += 1
+            k += 1
 
 
 if __name__ == "__main__":
-    arr=[38,27,43,3,9,82,10]
+    arr = [38, 27, 43, 3, 9, 82, 10]
     MergeSort(arr)
 
     print('Array after merge sort')

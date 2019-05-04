@@ -59,8 +59,53 @@ def reversalAlgo(arr, n, rotation):
     reverseArray(arr, 0, n - 1)
 
 
+# Rearrange array such that arr[i] >= arr[j] if i is even and arr[i]<=arr[j] if i is odd and j < i
+def rearrangeArr(arr):
+    tempArr = sorted(arr)
+    mid = len(arr) // 2
+    right = mid+1
+    left = mid
+    temp = []
+    temp.append(tempArr[left])
+    while left >= 0 and right < len(arr):
+        left -= 1
+        temp.append(tempArr[right])
+        temp.append(tempArr[left])
+        right += 1
+        print(temp)
+
+    return temp
+
+
+def rearrangeArrMain(arr):
+    n = len(arr)
+    evenPos = n // 2
+    oddPos = n - (n // 2)
+    tempArr = sorted(arr)
+
+    index = 0
+    # fill odd positions
+    while oddPos-1 >= 0:
+        # odd pos
+        arr[index] = tempArr[oddPos-1]
+        index += 2
+        oddPos -= 1
+    index = 1
+    while evenPos-1 >= 0:
+        arr[index] = tempArr[n-evenPos]
+        index += 2
+        evenPos -= 1
+
+    # fill even postitions
+    # while oddPos
+    return arr
+
+
 if __name__ == "__main__":
     arr = [1, 2, 3, 4, 5, 6, 7]
+    arr = [1, 2, 1, 4, 5, 6, 8, 8]
     # leftRotate(arr, 2, len(arr))
-    jugglingShift(arr, 2, len(arr))
-    print(arr)
+    # jugglingShift(arr, 2, len(arr))
+    # print(rearrangeArr(arr))
+    print(rearrangeArrMain(arr))
+    # print(arr)
